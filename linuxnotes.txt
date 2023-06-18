@@ -1,0 +1,422 @@
+ Unix is base version of operating system
+Linux is version of unix operating system
+
+Characteristics:
+--------------------------------------
+It is freeware software---no cost for license
+It is opensource software--Source code is open to modify as per your need
+It is multiuser operating system
+It is multitasking operating system
+Supports both cui and gui base----cui-command user interface--Example Ubuntu
+Most powerfull is cui
+
+      How you can create multiple directoris in one click??
+      -----mkdir dir{1..50}
+
+      How you can create multiple files in multiple directories?
+      -----touch dir{1..50}/file{1..100}
+
+It is more secure than windows OS
+
+Flavours of Unix:
+------------------
+RedHat Linux
+Ubuntu
+Centos
+Fedora
+Slackware
+Open
+Open Solaris
+Kali
+Suse Linux Enterprise server
+Open Suse
+
+Note:distrowatch.com-------------This website provides multiple flavours on Linux
+
+
+Components of UNIX:
+------------------
+Shell
+Kernel
+
+1. Shell
+-------------
+It is outer layer of OS
+Shell reads command provided by user
+Shell will check it is valid command or not
+Shell will check it is properly used command or not
+If everything is ok shell will interprete/convert that command into kernel understandable format and handover it to kernel
+It acts as interface between user and kernel
+
+2. Kernel
+It will execute command and gives result with help of hardware 
+It is core of OS
+It is responsible for memory allocation and processor allocation
+It acts as interface between shell and hardware
+
+
+To do big things:
+Combination of multiple command
+--------
+-----------
+----
+------
+----
+-------------This is called script which is shell script
+
+
+
+Command Execution flow:
+-----------------------
+User will type command
+Shell will read and covert for kernel
+Kernel gives result
+
+Two types of Users:
+-------------------
+Normal user------$
+Super user-------#
+
+
+sudo -i ==> To switch to superuser
+
+
+***For practice linux
+Online UNIX terminal: http://www.masswerk.at/jsuix
+
+
+
+The most commonly used commands:
+---------------------------------
+1. pwd---> present working diretory
+2. ls----> list out all files in directory
+3. mkdir----> To make a directory
+4. cd---> change directory
+5. touch---> create new file
+6. cal----> Display the current month calender
+7. date---> Display current date and time
+8. help---> To display list of available
+9. clear--> To clear terminal
+10. exit--> To logout session
+11. hello--> To display in brief system information
+
+
+Users get created in home directory of root----
+----For example if deepak user is there, then it's path is /home/guest/deepak
+
+
+
+****In Linux once file deleted then it can not be recover....hence take care while using linux 'rm' command
+
+
+
+Linux File System:
+-------------------
+Types of files in linux:
+------------------------
+In Python everything is treated as object.
+In Linux everythhing is treated as file.
+
+Files in Linux OS divided into three types:
+1. Normal files/odinary files
+2. Directory files
+3. Device files
+
+
+1. Normal file:
+------------------
+These files contain data. It can be normal  text file or binary file--Images,audio and Videos.
+
+abc.txt
+test.sh
+test.py
+sunny.jpg
+bahubali.mp4
+
+*******In linux the file extension is not important. Linux can identified it based on content*******
+
+
+2. Directory files:
+-----------------
+In linux these files represent directory.
+Directory also treated as files.
+
+
+3. Device files:
+------------------
+In linux every device is represented as file.
+By using these files we can communicate with that device or drivers.
+Inside /dev directory all device related files are there.
+
+terminal is a device which can also be consider file..
+
+terminal 1 ==> /dev/pts/0
+terminal 2 ==> /dev/pts/1
+
+For example you want to send Hello Termial1 mg to other terminal then..
+===>  $ echo 'Hello Terminal2' > /dev/pts/1
+
+
+Note:
+ctrl+alt+t ==> To open terminal
+ctrl+d ==> To close the terminal 
+
+
+How to check file type:
+------------------------
+In ubuntu blue color files represents: Directories and remaining are ordinary files.
+Dont depend on color conventions....
+
+We have to use ls command with -l option. 
+-l mens long listing.
+After running above command u will see details with number of column. 
+
+>>In first column seee first symbol.This symbol represent type of file.
+>>If it is - then it is file
+>>If it is d then it is directory file
+>>If it is l then it is link file
+
+
+File system navigation commands:
+---------------------------------
+
+Hidden files and directory
+
+ls -a === -a is all
+
+There are two types of hidden file .(Single dot) and ..(Double dot) 
+. ==> Single dot means current directory
+.. ==> Double dot means parent directory
+
+
+-----cd..==>o to parent directory
+-----cd ../../..===> To go to previous to precvious directory
+
+----In linux if there are multiple users then these users are created in home directory.
+
+User home directory represented by symbol ~
+hence if we type 'cd ~' we will go in user home directory.
+If you used only 'cd' command you will go to user home directory and not in root directory
+If you want to go to previous working directory  use cd - command
+If you want directly go to home directory use command 'cd /home'
+
+
+
+***Linux File system heirarchy***
+--------------------------------------
+Linux file system is tree like structure
+/ is topmost directory
+Sub directories: bin  etc  lib   dev  usr  cdrom
+
+1. bin directory:
+-------------------
+bin means binary
+In bin directory all binary executable files relate to our linux command.
+Example: If you type 'which ls' command you will get output= bin/ls
+Hence ls or mkdir such type of commands are from bin folder
+
+2. sbin directory:
+---------------------
+sbin means system bin.
+Noraml user related command are in bin 
+Super user uses special commands contain in sbin
+
+
+3. etc directory:
+----------------------
+All system configuration files included in etc folder
+If you provided passward in cetain case then such type of information is available in etc folder
+/etc/passwd ===> All users information
+/etc/group ===> All groups information is avaiable
+/etc/hosts ===> IP adress or DNS name such type of information about hhost machine is available 
+
+
+****************************************************************************************
+
+Need of virtual box:
+-----------------------
+To run multiple virtual computers on a platform that platform is vitual box
+
+
+********************************************************************************************************************************
+********************************************************************************************************************************
+********************************************************************************************************************************
+                                                          BOOK LINUX BIBLE
+
+The default shell used in all Linux distributions is the GNU bash shell.The GNU bash shell is a program that provides interactive access to the linux system. It runs as a regular program, normally started whenever a user logs in to a terminal. The shell that the system starts depends on your user ID configuration. 
+
+The /etc/passwd file contains a list of all the system user accounts, along with some basic configuration information about each user. Here’s a sample entry from a /etc/passwd file "vitthal:x:501:501:Rich Blum:/home/vitthal:/bin/bash"
+
+The prompt is your gateway to the shell. The default prompt symbol for the bash shell is the dollar sign ($).
+To create a new prompt, just assign a new string to the PS1 variable:
+[rich@testbox ~]$ PS1="[\t][\u]\$"
+[14:40:32][rich]$
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
