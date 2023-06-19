@@ -402,6 +402,11 @@ exit – log out of current session
 
 ****This is for updated branch in git************
 
+Bydefault you are in hhome directory. Use forward slash for going in perticular directory.
+There are two types.
+1.Absolute path :Begine with /
+2.Relative path: Relative to current directory
+
 
 
 
